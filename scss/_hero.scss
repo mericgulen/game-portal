@@ -1,0 +1,68 @@
+.hero {
+  height: calc(100vh - 16.2rem);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+    url('../images/hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  display: grid;
+  place-items: center;
+  position: relative;
+
+  &__heading {
+    position: absolute;
+    top: 11%;
+    left: 2.5%;
+    font-size: $fs-5;
+    text-transform: uppercase;
+    color: $primary-clr;
+    letter-spacing: 0.2rem;
+    span {
+      color: $light-clr;
+    }
+  }
+  @include media(small) {
+    .hero__heading {
+      font-size: $fs-2;
+    }
+  }
+  &__clip {
+    max-width: 95%;
+    width: 100%;
+    min-height: 40rem;
+    position: absolute;
+    top: 13%;
+    left: 2.2%;
+
+    border: 0.1rem solid rgba(255, 255, 255, 0.6);
+    clip-path: polygon(0% 15%, 40% 15%, 40% 0%, 100% 0%, 100% 100%, -100% 100%);
+
+    .hero__clip-content {
+      width: 70%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+
+      h2 {
+        font-size: $fs-4;
+        margin-bottom: 5rem;
+      }
+      a {
+        // @include flex-d(flex,center,center);
+        display: inline-block;
+        padding: 1rem 5rem;
+        text-align: center;
+        border: 0.1rem solid transparent;
+        font-size: $fs-2;
+        &:hover {
+          color: $light-clr;
+          background-color: $secondary-clr;
+          border: 0.1rem solid $light-clr;
+        }
+      }
+    }
+  }
+}

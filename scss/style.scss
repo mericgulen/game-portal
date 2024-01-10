@@ -1,0 +1,50 @@
+//* Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito:wght@300;400;500&display=swap');
+
+@import 'abstracts';
+@import 'components';
+@import 'header';
+@import 'hero';
+@import 'news';
+@import 'games';
+@import 'gallery';
+@import 'team';
+@import 'reviews';
+@import 'footer';
+@import 'queries';
+
+//* general Settings
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+body {
+  font-family: $secondary-font;
+  color: $gray-clr;
+  overflow-x: hidden;
+
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  font-family: $primary-font;
+  color: $light-clr;
+}
+img {
+  width: 100%;
+}

@@ -1,0 +1,114 @@
+.team {
+  padding-bottom: 8rem;
+  padding-top: 4rem;
+  &-container {
+    padding: 0 2rem;
+  }
+
+  &__card-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 2rem;
+    .team__card {
+      height: 40rem;
+      background-color: transparent;
+      perspective: 100rem;
+
+      .team__card-inner {
+        width: 100%;
+        height: 100%;
+        transition: $transition;
+        transform-style: preserve-3d;
+
+        .team__card-front,
+        .team__card-back {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          overflow: hidden;
+          .card-text {
+            width: 15rem;
+            height: 1.8rem;
+            padding: 1rem 0;
+            position: absolute;
+            top: 2.4rem;
+            left: -4rem;
+            background-color: $secondary-clr;
+            color: $light-clr;
+            transform: rotate(-45deg);
+            font-size: 1.4rem;
+            @include flex-d(flex, center, center);
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .team__card-back {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: lighten($secondary-clr, 2);
+          transform: rotateY(180deg);
+
+          @include flex-d(flex, center, center);
+          flex-direction: column;
+          row-gap: 5rem;
+
+          .card-back-text {
+            color: $primary-clr;
+            font-size: $fs-3;
+            letter-spacing: 0.3rem;
+          }
+
+          &-social {
+            display: flex;
+            justify-content: space-between;
+            column-gap: 4rem;
+          }
+          &-social i {
+            font-size: $fs-3;
+            transition: $transition;
+            &:hover {
+              color: $primary-clr;
+            }
+          }
+        }
+      }
+
+      &:hover .team__card-inner {
+        transform: rotateY(180deg);
+        .card-text {
+          display: none;
+        }
+      }
+    }
+
+    .team__card:nth-child(4) {
+      display: none;
+    }
+  }
+
+  @include media(medium) {
+    .team__card-content {
+      grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+      grid-gap: 3rem;
+      .team__card:nth-child(4) {
+        display: block;
+      }
+    }
+  }
+  @include media(small) {
+    .team__card-content {
+      grid-template-columns: 1fr;
+      grid-gap: 3rem;
+    }
+  }
+}

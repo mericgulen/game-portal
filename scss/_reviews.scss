@@ -1,0 +1,114 @@
+.reviews__content {
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  @include flex-d(flex, space-between, center);
+  background-color: $secondary-clr;
+
+  .reviews-img {
+    flex-basis: 55%;
+    height: 100%;
+    overflow: hidden;
+    filter: grayscale(60%);
+    clip-path: polygon(0% 0%, 80% 0%, 100% 100%, 0% 100%);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: $transition;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .reviews__info {
+    flex-basis: 45%;
+    height: 100%;
+    padding: 4rem;
+    font-size: $fs-small;
+    @include flex-d(flex, flex-start, center);
+
+    &-content {
+      @include flex-d(flex, center, center);
+      flex-direction: column;
+      flex-basis: 100%;
+      padding-top: 1rem;
+      .info-title {
+        font-size: $fs-3;
+        color: $primary-clr;
+        letter-spacing: 0.3rem;
+        text-transform: uppercase;
+      }
+
+      .info-tag {
+        margin: 1.4rem 0;
+        color: $light-clr;
+      }
+      .review-testimonial {
+        @include flex-d(flex, flex-start, center);
+        column-gap: 2rem;
+        margin-top: 1.6rem;
+
+        img {
+          width: 8rem;
+          height: 8rem;
+          border-radius: 50%;
+        }
+        .review__testimonial-info {
+          @include flex-d(flex, flex-start, center);
+          flex-direction: column;
+          row-gap: 1.4rem;
+
+          .testimonial-name {
+            font-size: $fs-small;
+          }
+          .review-platform {
+            @include flex-d(flex, flex-start, center);
+            column-gap: 3rem;
+            font-size: $fs-3;
+            color: $primary-clr;
+          }
+          .info-text {
+            font-size: $fs-1;
+          }
+          .review-btn {
+            color: $light-clr;
+            font-size: $fs-text;
+            margin-left: 0.5rem;
+            transition: $transition;
+            &:hover {
+              color: lighten($primary-clr, 10%);
+            }
+          }
+
+          .review__rating {
+            @include flex-d(flex, flex-start, center);
+            column-gap: 0.8rem;
+            font-size: $fs-small;
+            color: $sub-text-clr;
+          }
+        }
+      }
+    }
+  }
+
+  @include media(small) {
+    .reviews-img {
+      display: none;
+    }
+    .reviews__info {
+      flex-basis: 100%;
+
+      &-content {
+        .info-title,
+        .info-tag {
+          align-self: flex-start;
+        }
+        .review-testimonial {
+          margin-top: 2.4rem;
+        }
+      }
+    }
+  }
+}

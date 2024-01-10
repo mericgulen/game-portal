@@ -1,0 +1,161 @@
+.games {
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    grid-gap: 3rem;
+    grid-template-areas:
+      'iron iron iron spider'
+      'batman marvel thor hobbits';
+
+    &-info {
+      width: 100%;
+      height: 100%;
+      background-color: $secondary-clr;
+
+      .games__img {
+        img {
+          transition: $transition;
+        }
+      }
+    }
+    &-featured {
+      display: grid;
+      grid-template-columns: 35% 1fr;
+      place-items: center;
+
+      .games__img {
+        width: 100%;
+        height: 100%;
+        img {
+          height: 100%;
+        }
+      }
+
+      .rating {
+        width: 5rem;
+        height: 5rem;
+        line-height: 5rem;
+        text-align: center;
+      }
+    }
+
+    &-text {
+      padding: 3rem 1.6rem;
+      background-color: $secondary-clr;
+
+      .game-title {
+        font-size: $fs-2;
+        color: $light-clr;
+      }
+      .game-info {
+        @include flex-d(flex, space-between, center);
+        margin-top: 1.6rem;
+
+        .stars {
+          @include flex-d(flex, space-between, center);
+          gap: 0.2rem;
+          i {
+            color: $sub-text-clr;
+          }
+        }
+        .game-comment {
+          font-size: $fs-1;
+          color: $primary-clr;
+        }
+      }
+      .text {
+        padding: 1rem 0;
+        font-size: $fs-text-small;
+        font-weight: 300;
+        line-height: 1.5;
+      }
+    }
+
+    .game-1 {
+      grid-area: iron;
+    }
+    .game-2 {
+      grid-area: spider;
+    }
+    .game-3 {
+      grid-area: batman;
+    }
+    .game-4 {
+      grid-area: marvel;
+    }
+    .game-5 {
+      grid-area: thor;
+    }
+    .game-6 {
+      grid-area: hobbits;
+    }
+  }
+
+  @include media(large) {
+    .games {
+      &__content {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.4rem;
+        grid-template-areas:
+          'iron iron iron'
+          'batman marvel thor';
+
+        .game-1 {
+          grid-area: iron;
+        }
+        .game-2 {
+          display: none;
+        }
+        .game-3 {
+          grid-area: batman;
+        }
+        .game-4 {
+          grid-area: marvel;
+        }
+        .game-5 {
+          grid-area: thor;
+        }
+        .game-6 {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @include media(medium) {
+    .games__content {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.6rem;
+      grid-template-areas:
+        'iron iron '
+        'batman marvel';
+
+      .game-1 {
+        grid-area: iron;
+      }
+
+      .game-3 {
+        grid-area: batman;
+      }
+      .game-4 {
+        grid-area: marvel;
+      }
+      .game-5 {
+        display: none;
+      }
+    }
+  }
+
+  @include media(small) {
+    .games {
+      &__content {
+        .game-info {
+          .game-comment {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}

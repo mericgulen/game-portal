@@ -1,0 +1,63 @@
+.news {
+  width: 100%;
+  min-height: 25rem;
+  padding: calc(3rem + 2vw) 0;
+  background-color: $secondary-clr;
+  @include flex-d(flex, space-between, center);
+  &__title {
+    padding: 1rem calc(2vw + 2vh);
+    .title {
+      font-size: $fs-4;
+      text-transform: uppercase;
+      color: $primary-clr;
+    }
+  }
+  &-animate {
+    flex: 1;
+    overflow: hidden;
+  }
+  &__content {
+    display: flex;
+    &-animate {
+      @include flex-d(flex, space-between, center);
+
+      .animate-item {
+        display: inline-block;
+        font-size: $fs-2;
+        padding: 0.8rem 2.4rem;
+        border: 0.1rem solid $light-clr;
+        border-radius: 1rem;
+        white-space: nowrap;
+        cursor: pointer;
+        transition: $transition;
+        &:hover {
+          background-color: $primary-clr;
+        }
+
+        @keyframes goleft {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+        @keyframes goRight {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(100%);
+          }
+        }
+      }
+    }
+  }
+
+  .reverse {
+    margin-top: 3rem;
+    flex-direction: row-reverse;
+  }
+
+
+}

@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="desctiption" content="This project a game website" />
+    <meta name="keywords" content="game, css, html, js," />
+    <meta name="" content="" />
+    <meta name="author" content="Meric Gulen" />
+    <title>Game Portal</title>
+    <!--* Bs cdn  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <!--* Google Fonts  -->
+
+    <!--* Custom css  -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="bg-light">
+    <!--* Header  -->
+    <header class="header bg-dark bs-1" id="header">
+      <div class="container">
+        <div class="header__top">
+          <div class="header-logo">
+            <a href="#"><img src="./images/logo.png" alt="logo image" /></a>
+          </div>
+          <div class="header__top-login">
+            <a class="btn btn-primary" href="#"
+              >Login <span><i class="bi bi-box-arrow-in-right"></i></span
+            ></a>
+            <a class="btn ms-2" href="#"
+              >Register<span><i class="bi bi-person-fill-add"></i></span
+            ></a>
+          </div>
+          <div class="hamburger-menu">
+            <i class="open bi bi-list"></i>
+            <i class="close bi bi-x"></i>
+          </div>
+        </div>
+        <div class="header__nav">
+          <nav class="header__nav-menu">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="#">Home</a>
+              </li>              
+              <li class="nav__item">
+                <a class="nav__link" href="#games">Games</a>
+                <i class="bi bi-caret-down-fill"></i>
+
+                <ul class="dropdown">
+                  <li class="nav__item">
+                    <a class="nav__link" href="#">XBox</a>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__link" href="#">Pc Games</a>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__link" href="#">Playstation</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#news">News</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#gallery">Gallery</a>
+                <i class="bi bi-caret-down-fill"></i>
+
+                <ul class="dropdown">
+                  <li class="nav__item">
+                    <a class="nav__link" href="#games">Games</a>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__link" href="#">Pc</a>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__link" href="#">Playstation</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#reviews">Reviews</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#contact">Contact</a>
+              </li>
+            </ul>
+            <div class="header__nav-search">
+              <form class="search__form">
+                <input class="bs-1" type="search" placeholder="Search" />
+                <button class="" type="submit">
+                  <i class="bi bi-search"></i>
+                </button>
+              </form>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!--* Hero  -->
+    <section class="hero">
+      <h1 class="hero__heading">Game <span>Portal</span></h1>
+      <div class="hero__clip">
+        <div class="hero__clip-content">
+          <h2>Seçeneklerinizi keşfedin</h2>
+          <a class="btn btn-primary" href="#">Buy Now</a>
+        </div>
+      </div>
+    </section>
+    <main class="main">
+      <!--* News  -->
+      <section class="news" id="news">
+        <div class="news__title">
+          <h4 class="title">News</h4>
+        </div>
+        <div class="news-animate">
+          <div class="news__content">
+            <div class="news__content-animate animate-left">
+              <a href="#" class="animate-item">Ironman</a>
+              <a href="#" class="animate-item ml-1">Thor</a>
+              <a href="#" class="animate-item ml-1">Ironman</a>
+              <a href="#" class="animate-item ml-1">The Red Wolf</a>
+              <a href="#" class="animate-item ml-1">The Dark Horse</a>
+              <a href="#" class="animate-item ml-1">Snake</a>
+              <a href="#" class="animate-item ml-1">RedFisher</a>
+              <a href="#" class="animate-item ml-1">Star Glider</a>
+              <a href="#" class="animate-item ml-1">Deadman</a>
+              <a href="#" class="animate-item ml-1">The Atom</a>
+              <a href="#" class="animate-item ml-1">Ragman</a>
+              <a href="#" class="animate-item ml-1">Blazing Fast</a>
+              <a href="#" class="animate-item ml-1">Romance Guppy</a>
+              <a href="#" class="animate-item ml-1">Yellow Lion</a>
+              <a href="#" class="animate-item ml-1">Zero</a>
+              <a href="#" class="animate-item ml-1">Leonidas</a>
+              <a href="#" class="animate-item ml-1">Leon</a>
+              <a href="#" class="animate-item ml-1">Homely Sharpshooters</a>
+              <a href="#" class="animate-item ml-1">Fisheye</a>
+              <a href="#" class="animate-item ml-1">Falcon</a>
+            </div>
+            <div class="news__content-animate animate-left">
+              <a href="#" class="animate-item">Ironman</a>
+              <a href="#" class="animate-item ml-1">Thor</a>
+              <a href="#" class="animate-item ml-1">Ironman</a>
+              <a href="#" class="animate-item ml-1">The Red Wolf</a>
+              <a href="#" class="animate-item ml-1">The Dark Horse</a>
+              <a href="#" class="animate-item ml-1">Snake</a>
+              <a href="#" class="animate-item ml-1">RedFisher</a>
+              <a href="#" class="animate-item ml-1">Star Glider</a>
+              <a href="#" class="animate-item ml-1">Deadman</a>
+              <a href="#" class="animate-item ml-1">The Atom</a>
+              <a href="#" class="animate-item ml-1">Ragman</a>
+              <a href="#" class="animate-item ml-1">Blazing Fast</a>
+              <a href="#" class="animate-item ml-1">Romance Guppy</a>
+              <a href="#" class="animate-item ml-1">Yellow Lion</a>
+              <a href="#" class="animate-item ml-1">Zero</a>
+              <a href="#" class="animate-item ml-1">Leonidas</a>
+              <a href="#" class="animate-item ml-1">Leon</a>
+              <a href="#" class="animate-item ml-1">Homely Sharpshooters</a>
+              <a href="#" class="animate-item ml-1">Fisheye</a>
+              <a href="#" class="animate-item ml-1">Falcon</a>
+            </div>
+          </div>
+
+          <div class="news__content reverse">
+            <div class="news__content-animate animate-right">
+              <a href="#" class="animate-item">Ironman</a>
+              <a href="#" class="animate-item ml-1">Thor</a>
+              <a href="#" class="animate-item ml-1">Ironman</a>
+              <a href="#" class="animate-item ml-1">The Red Wolf</a>
+              <a href="#" class="animate-item ml-1">The Dark Horse</a>
+              <a href="#" class="animate-item ml-1">Snake</a>
+              <a href="#" class="animate-item ml-1">RedFisher</a>
+              <a href="#" class="animate-item ml-1">Star Glider</a>
+              <a href="#" class="animate-item ml-1">Deadman</a>
+              <a href="#" class="animate-item ml-1">The Atom</a>
+              <a href="#" class="animate-item ml-1">Ragman</a>
+              <a href="#" class="animate-item ml-1">Blazing Fast</a>
+              <a href="#" class="animate-item ml-1">Romance Guppy</a>
+              <a href="#" class="animate-item ml-1">Yellow Lion</a>
+              <a href="#" class="animate-item ml-1">Zero</a>
+              <a href="#" class="animate-item ml-1">Leonidas</a>
+              <a href="#" class="animate-item ml-1">Leon</a>
+              <a href="#" class="animate-item ml-1">Homely Sharpshooters</a>
+              <a href="#" class="animate-item ml-1">Fisheye</a>
+              <a href="#" class="animate-item ml-1">Falcon</a>
+            </div>
+            <div class="news__content-animate animate-right">
+              <a href="#" class="animate-item">Ironman</a>
+              <a href="#" class="animate-item ml-1">Thor</a>
+              <a href="#" class="animate-item ml-1">Ironman</a>
+              <a href="#" class="animate-item ml-1">The Red Wolf</a>
+              <a href="#" class="animate-item ml-1">The Dark Horse</a>
+              <a href="#" class="animate-item ml-1">Snake</a>
+              <a href="#" class="animate-item ml-1">RedFisher</a>
+              <a href="#" class="animate-item ml-1">Star Glider</a>
+              <a href="#" class="animate-item ml-1">Deadman</a>
+              <a href="#" class="animate-item ml-1">The Atom</a>
+              <a href="#" class="animate-item ml-1">Ragman</a>
+              <a href="#" class="animate-item ml-1">Blazing Fast</a>
+              <a href="#" class="animate-item ml-1">Romance Guppy</a>
+              <a href="#" class="animate-item ml-1">Yellow Lion</a>
+              <a href="#" class="animate-item ml-1">Zero</a>
+              <a href="#" class="animate-item ml-1">Leonidas</a>
+              <a href="#" class="animate-item ml-1">Leon</a>
+              <a href="#" class="animate-item ml-1">Homely Sharpshooters</a>
+              <a href="#" class="animate-item ml-1">Fisheye</a>
+              <a href="#" class="animate-item ml-1">Falcon</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--* Ganes  -->
+      <section class="games py-8" id="games">
+        <div class="container">
+          <h2 class="section-title">Games</h2>
+          <div class="games__content mt-5">
+            <div class="games__content-info game-1 games__content-featured">
+              <div class="games__img overlay-1">
+                <div class="rating">9.6</div>
+                <a href="#"
+                  ><img src="./images/ironman.jpg" alt="ironman image"
+                /></a>
+              </div>
+              <div class="games__content-text">
+                <h3 class="game-title">Ironman</h3>
+                <div class="game-info">
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <a class="game-comment" href="#">39 Comments</a>
+                </div>
+                <p class="text">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Similique autem ex quo corporis modi? Veniam nulla porro,
+                  saepe fugiat sunt. Repellendus doloribus obcaecati
+                  voluptatibus magni esse sit maxime?
+                </p>
+              </div>
+            </div>
+            <div class="games__content-info game-2">
+              <div class="games__img overlay-1">
+                <div class="rating">8.4</div>
+                <a href="#"
+                  ><img src="./images/spiderman.jpg" alt="spiderman image"
+                /></a>
+              </div>
+              <div class="games__content-text">
+                <h3 class="game-title">Spiderman</h3>
+                <div class="game-info">
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <a class="game-comment" href="#">18 Comments</a>
+                </div>
+              </div>
+            </div>
+            <div class="games__content-info game-3">
+              <div class="games__img overlay-1">
+                <div class="rating">9.1</div>
+                <a href="#"
+                  ><img src="./images/batman.jpg" alt="batman image"
+                /></a>
+              </div>
+              <div class="games__content-text">
+                <h3 class="game-title">Batman</h3>
+                <div class="game-info">
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <a class="game-comment" href="#">25 Comments</a>
+                </div>
+              </div>
+            </div>
+            <div class="games__content-info game-4">
+              <div class="games__img overlay-1">
+                <div class="rating">9.8</div>
+                <a href="#"
+                  ><img src="./images/marvel.jpg" alt="marvel image"
+                /></a>
+              </div>
+              <div class="games__content-text">
+                <h3 class="game-title">Marvel</h3>
+                <div class="game-info">
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <a class="game-comment" href="#">45 Comments</a>
+                </div>
+              </div>
+            </div>
+            <div class="games__content-info game-5">
+              <div class="games__img overlay-1">
+                <div class="rating">9.0</div>
+                <a href="#"><img src="./images/thor.jpg" alt="thor image" /></a>
+              </div>
+              <div class="games__content-text">
+                <h3 class="game-title">Thor</h3>
+                <div class="game-info">
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                  </div>
+                  <a class="game-comment" href="#">42 Comments</a>
+                </div>
+              </div>
+            </div>
+            <div class="games__content-info game-6">
+              <div class="games__img overlay-1">
+                <div class="rating">8.7</div>
+                <a href="#"
+                  ><img src="./images/hobbits.jpg" alt="hobbit image"
+                /></a>
+              </div>
+              <div class="games__content-text">
+                <h3 class="game-title">Hobbits</h3>
+                <div class="game-info">
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                  </div>
+                  <a class="game-comment" href="#">26 Comments</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--* Gallery  -->
+      <section class="gallery" id="gallery">
+        <div class="container">
+          <h2 class="section-title">Gallery</h2>
+          <div class="gallery__content mt-5">
+            <div class="gallery__content-item item-1">
+              <div class="gallery__img overlay-2">
+                <div class="img-text">Ironman</div>
+                <img
+                  class="image"
+                  src="./images/ironman.jpg"
+                  alt="gallery image"
+                />
+              </div>
+            </div>
+            <div class="gallery__content-item item-2">
+              <div class="gallery__img overlay-2">
+                <div class="img-text">Batman</div>
+                <img
+                  class="image"
+                  src="./images/batman.jpg"
+                  alt="gallery image"
+                />
+              </div>
+            </div>
+            <div class="gallery__content-item item-3">
+              <div class="gallery__img overlay-2">
+                <div class="img-text">Thor</div>
+                <img
+                  class="image"
+                  src="./images/thor.jpg"
+                  alt="gallery image"
+                />
+              </div>
+            </div>
+            <div class="gallery__content-item item-4">
+              <div class="gallery__img overlay-2">
+                <div class="img-text">Spiderman</div>
+                <img
+                  class="image"
+                  src="./images/spiderman.jpg"
+                  alt="gallery image"
+                />
+              </div>
+            </div>
+            <div class="gallery__content-item item-5">
+              <div class="gallery__img overlay-2">
+                <div class="img-text">Hobbits</div>
+                <img
+                  class="image"
+                  src="./images/hobbits.jpg"
+                  alt="gallery image"
+                />
+              </div>
+            </div>
+            <div class="gallery__content-item item-6">
+              <div class="gallery__img overlay-2">
+                <div class="img-text">Batman</div>
+                <img
+                  class="image"
+                  src="./images/batman.jpg"
+                  alt="gallery image"
+                />
+              </div>
+            </div>
+            <div class="gallery__content-item item-7">
+              <div class="gallery__img overlay-2">
+                <div class="img-text">Ironman</div>
+                <img
+                  class="image"
+                  src="./images/ironman.jpg"
+                  alt="gallery image"
+                />
+              </div>
+            </div>
+            <div class="gallery__content-item item-8">
+              <div class="gallery__img overlay-2">
+                <div class="img-text">Marvel</div>
+                <img
+                  class="image"
+                  src="./images/marvel.jpg"
+                  alt="gallery image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--* Team  -->
+      <section class="team py-8" id="team">
+        <div class="container">
+          <h2 class="section-title">Team</h2>
+
+          <div class="team__card-content mt-5 team-container">
+            <div class="team__card">
+              <div class="team__card-inner">
+                <div class="team__card-front">
+                  <div class="card-text">Rob Doe</div>
+                  <img src="./images/team-1.jpg" alt="person image" />
+                </div>
+                <div class="team__card-back">
+                  <p class="card-back-text">Designer</p>
+                  <div class="team__card-back-social">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="$"><i class="bi bi-twitter"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="team__card">
+              <div class="team__card-inner">
+                <div class="team__card-front">
+                  <div class="card-text">Alon Doe</div>
+                  <img src="./images/team-2.jpg" alt="person image" />
+                </div>
+                <div class="team__card-back">
+                  <p class="card-back-text">Developer</p>
+                  <div class="team__card-back-social">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="$"><i class="bi bi-twitter"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="team__card">
+              <div class="team__card-inner">
+                <div class="team__card-front">
+                  <div class="card-text">Jane Doe</div>
+                  <img src="./images/team-3.jpg" alt="person image" />
+                </div>
+                <div class="team__card-back">
+                  <p class="card-back-text">Programmer</p>
+                  <div class="team__card-back-social">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="$"><i class="bi bi-twitter"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="team__card">
+              <div class="team__card-inner">
+                <div class="team__card-front">
+                  <div class="card-text">Sam Doe</div>
+                  <img src="./images/team-4.jpg" alt="person image" />
+                </div>
+                <div class="team__card-back">
+                  <p class="card-back-text">Expert</p>
+                  <div class="team__card-back-social">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="$"><i class="bi bi-twitter"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--* Reviews  -->
+      <section class="reviews" id="reviews">
+        <div class="container">
+          <h2 class="section-title">Reviews</h2>
+        </div>
+
+        <div class="reviews__content mt-5">
+          <div class="reviews-img">
+            <img src="./images/review-1.jpg" alt="reviews image" />
+          </div>
+          <div class="reviews__info">
+            <div class="reviews__info-content">
+              <h3 class="info-title">IronMan</h3>
+              <p class="info-tag">Action | Excitement</p>
+              <div class="review-testimonial">
+                <img src="./images/person-1.jpg" alt="team image" />
+                <div class="review__testimonial-info">
+                  <p class="testimonial-name">Rob Doe</p>
+                  <div class="review-platform">
+                    <i class="bi bi-apple"></i>
+                    <i class="bi bi-android"></i>
+                    <i class="bi bi-windows"></i>
+                  </div>
+                  <p class="info-text">
+                    Lorem ipsum sit elit.
+                    <a class="review-btn" href="#">Read More</a>
+                  </p>
+                  <div class="review__rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--* Contact -->
+    <footer class="footer py-8" id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+      </div>
+      <div class="footer__bg mt-5">
+        <div class="footer__info">
+          <div class="footer__info-privacy">
+            <a class="footer-btn" href="#">Gizlilik Politikası</a>
+            <a class="footer-btn" href="#">Bilgilendirme Formu</a>
+            <a class="footer-btn" href="#">Oyun Kuralları</a>
+
+            <div class="footer__info-social">
+              <a class="icon" href="#"><i class="bi bi-facebook"></i></a>
+              <a class="icon" href="#"><i class="bi bi-linkedin"></i></a>
+              <a class="icon" href="#"><i class="bi bi-twitter"></i></a>
+              <a class="icon" href="#"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <form class="form">
+          <label for="fname">FirstName</label>
+          <input
+            type="text"
+            id="fname"
+            name="firstname"
+            placeholder="Your Name"
+          />
+          <label for="lname">LastName</label>
+          <input
+            type="text"
+            id="lname"
+            name="lastname"
+            placeholder="Your Last Name"
+          />
+          <label for="city">City</label>
+          <select name="city" id="city">
+            <option value="istanbul">İstanbul</option>
+            <option value="ankara">Ankara</option>
+            <option value="izmir">İzmir</option>
+            <option value="bursa">Bursa</option>
+            <option value="antalya">Antalya</option>
+          </select>
+          <label for="country">Message</label>
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Your Message"
+          ></textarea>
+
+          <input class="btn" type="submit" value="Submit" />
+        </form>
+        <p class="copyright">&copy; <span class="year">2024</span> Mgdev</p>
+      </div>
+    </footer>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
