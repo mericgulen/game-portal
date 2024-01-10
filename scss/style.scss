@@ -11,7 +11,6 @@
 @import 'team';
 @import 'reviews';
 @import 'footer';
-@import 'queries';
 
 //* general Settings
 *,
@@ -29,7 +28,6 @@ body {
   font-family: $secondary-font;
   color: $gray-clr;
   overflow-x: hidden;
-
 }
 
 .container {

@@ -197,12 +197,14 @@
 .header__top .header-logo {
   width: 6rem;
 }
+.header__top .hamburger-menu {
+  margin-left: 1.4rem;
+  cursor: pointer;
+}
 .header__top .hamburger-menu .open,
 .header__top .hamburger-menu .close {
   font-size: 4rem;
-  margin-left: 1.4rem;
   color: #fff;
-  cursor: pointer;
   display: none;
 }
 .header__top-login {
@@ -1059,13 +1061,6 @@
   }
 }
 
-@media (max-width: 850px) {
-  .header__nav-search .search__form {
-    display: flex;
-    align-items: center;
-    gap: 1.2rem;
-  }
-}
 *,
 *::after,
 *::before {
