@@ -13,16 +13,6 @@
     .header-logo {
       width: 6rem;
     }
-    .hamburger-menu {
-      margin-left: 1.4rem;
-      cursor: pointer;
-      .open,
-      .close {
-        font-size: 4rem;
-        color: $light-clr;
-        display: none;
-      }
-    }
 
     &-login {
       flex: 1;
@@ -32,159 +22,175 @@
       }
     }
   }
-
-  &__nav {
-    &-menu {
-      @include flex-d(flex, space-between, center);
-      .nav__list {
-        display: flex;
-        .nav__item {
-          line-height: 6rem;
-          padding: 1rem;
-          position: relative;
+}
+.header__nav {
+  &-menu {
+    @include flex-d(flex, space-between, center);
+    .nav__list {
+      display: flex;
+      .nav__item {
+        line-height: 6rem;
+        padding: 1rem;
+        position: relative;
+        transition: $transition;
+        .dropdown {
+          position: absolute;
+          top: 11rem;
+          left: 0;
+          width: 180%;
           transition: $transition;
-          .dropdown {
-            position: absolute;
-            top: 11rem;
-            left: 0;
-            width: 180%;
-            transition: $transition;
-            opacity: 0;
-            visibility: hidden;
-            background-color: lighten($secondary-clr, 4%);
-            .nav__item {
-              line-height: 2.4rem;
-            }
+          opacity: 0;
+          visibility: hidden;
+          background-color: lighten($secondary-clr, 4%);
+          .nav__item {
+            line-height: 2.4rem;
           }
-          &:hover {
-            background-color: $primary-clr;
-            cursor: pointer;
-            & .dropdown {
-              opacity: 1;
-              visibility: visible;
-              top: 8rem;
-            }
+        }
+        &:hover {
+          background-color: $primary-clr;
+          cursor: pointer;
+          & .dropdown {
+            opacity: 1;
+            visibility: visible;
+            top: 8rem;
           }
         }
       }
+    }
+    .nav__link:link,
+    .nav-link:visited {
+      display: inline-block;
+      font-size: calc(1rem + 0.5vw);
+      font-weight: 500;
+      letter-spacing: 0.1rem;
+    }
+    & i {
+      color: $light-clr;
+    }
+  }
 
-      .nav__link:link,
-      .nav-link:visited {
-        display: inline-block;
-        font-size: calc(1rem + 0.5vw);
-        font-weight: 500;
-        letter-spacing: 0.1rem;
-      }
-      & i {
+  &-search {
+    .search__form {
+      @include flex-d-align(flex, center);
+      gap: 1.2rem;
+    }
+    input[type='search'],
+    button[type='submit'] {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      color: $light-clr;
+    }
+    input[type='search'] {
+      padding: 1rem 1.2rem;
+      border-bottom: 0.1rem solid transparent;
+      border-radius: 1.6rem;
+      text-indent: 1rem;
+    }
+    button[type='submit'] {
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.close {
+  margin-left: 2rem;
+  margin-top: 1.4rem;
+  cursor: pointer;
+  font-size: 4rem;
+  color: $light-clr;
+  display: none;
+}
+
+.header__top .open {
+  margin-left: 1.4rem;
+  cursor: pointer;
+  font-size: 4rem;
+  color: $light-clr;
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .header__top {
+    &-login {
+      a:not(span) {
         color: $light-clr;
+        font-size: 0;
+        padding: 0.4rem 0.8rem;
+        border-radius: 0;
+      }
+      span {
+        display: flex;
+        font-size: 2.6rem;
+      }
+      .btn {
+        background-color: $light-clr;
+        color: $dark-text-clr;
+        transition: $transition;
+
+        &:hover,
+        &:active {
+          background-color: $primary-clr;
+          color: $light-clr;
+        }
+        &-primary {
+          background-color: $primary-clr;
+          color: $light-clr;
+          &:hover {
+            background-color: $light-clr;
+            color: $dark-text-clr;
+          }
+        }
+      }
+    }
+  }
+  .header__top i.open {
+    display: inline-block !important;
+  }
+
+  .header__nav {
+    position: absolute;
+    top: 100%;
+    right: -30rem;
+    width: 30rem;
+    height: calc(100vh - 8.1rem);
+    background-color: $secondary-clr;
+    transition: $transition;
+    &-menu {
+      .nav__list {
+        width: 100%;
+        @include flex-d(flex, center, flex-start);
+        flex-direction: column;
+        margin-top: 3rem;
+        margin-left: 3rem;
+        .nav__item {
+          line-height: 2.6rem;
+          margin-bottom: 0.5rem;
+          .dropdown {
+            left: 100%;
+          }
+          &:hover {
+            & .dropdown {
+              top: 2rem;
+              background-color: $primary-clr;
+            }
+          }
+        }
+        .nav__link:link,
+        .nav-link:visited {
+          font-size: $fs-small;
+        }
       }
     }
 
     &-search {
+      position: absolute;
+      top: 70%;
+      right: 20%;
       .search__form {
         @include flex-d-align(flex, center);
         gap: 1.2rem;
-      }
-      input[type='search'],
-      button[type='submit'] {
-        border: none;
-        outline: none;
-        background-color: transparent;
-        color: $light-clr;
-      }
-      input[type='search'] {
-        padding: 1rem 1.2rem;
-        border-bottom: 0.1rem solid transparent;
-        border-radius: 1.6rem;
-        text-indent: 1rem;
-      }
-      button[type='submit'] {
-        font-size: 2rem;
-        cursor: pointer;
-      }
-    }
-  }
-
-  @include media(medium) {
-    .header__top {
-      &-login {
-        a:not(span) {
-          color: $light-clr;
-          font-size: 0;
-          padding: 0.4rem 0.8rem;
-          border-radius: 0;
-        }
-        span {
-          display: flex;
-          font-size: 2.6rem;
-        }
-        .btn {
-          background-color: $light-clr;
-          color: $dark-text-clr;
-          transition: $transition;
-
-          &:hover,
-          &:active {
-            background-color: $primary-clr;
-            color: $light-clr;
-          }
-          &-primary {
-            background-color: $primary-clr;
-            color: $light-clr;
-            &:hover {
-              background-color: $light-clr;
-              color: $dark-text-clr;
-            }
-          }
-        }
-      }
-    }
-    .hamburger-menu .open {
-      display: inline-block;
-    }
-
-    .header__nav {
-      position: absolute;
-      top: 100%;
-      right: -30rem;
-      width: 30rem;
-      height: 100vh;
-      background-color: $secondary-clr;
-      transition: $transition;
-      &-menu {
-        .nav__list {
-          width: 100%;
-          @include flex-d(flex, center, flex-start);
-          flex-direction: column;
-          margin-top: 3rem;
-          margin-left: 3rem;
-          .nav__item {
-            line-height: 2.6rem;
-            margin-bottom: 0.5rem;
-            .dropdown {
-              left: 100%;
-            }
-            &:hover {
-              & .dropdown {
-                top: 2rem;
-                background-color: $primary-clr;
-              }
-            }
-          }
-          .nav__link:link,
-          .nav-link:visited {
-            font-size: $fs-small;
-          }
-        }
-      }
-      &-search {
-        position: absolute;
-        top: 60%;
-        right: 20%;
-        .search__form {
-          @include flex-d-align(flex, center);
-          gap: 1.2rem;
-        }
       }
     }
   }

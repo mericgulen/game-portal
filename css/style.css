@@ -197,16 +197,6 @@
 .header__top .header-logo {
   width: 6rem;
 }
-.header__top .hamburger-menu {
-  margin-left: 1.4rem;
-  cursor: pointer;
-}
-.header__top .hamburger-menu .open,
-.header__top .hamburger-menu .close {
-  font-size: 4rem;
-  color: #fff;
-  display: none;
-}
 .header__top-login {
   flex: 1;
   display: flex;
@@ -215,6 +205,7 @@
 .header__top-login span {
   display: none;
 }
+
 .header__nav-menu {
   display: flex;
   justify-content: space-between;
@@ -283,47 +274,65 @@
   font-size: 2rem;
   cursor: pointer;
 }
+
+.close {
+  margin-left: 2rem;
+  margin-top: 1.4rem;
+  cursor: pointer;
+  font-size: 4rem;
+  color: #fff;
+  display: none;
+}
+
+.header__top .open {
+  margin-left: 1.4rem;
+  cursor: pointer;
+  font-size: 4rem;
+  color: #fff;
+  display: none !important;
+}
+
 @media (max-width: 768px) {
-  .header .header__top-login a:not(span) {
+  .header__top-login a:not(span) {
     color: #fff;
     font-size: 0;
     padding: 0.4rem 0.8rem;
     border-radius: 0;
   }
-  .header .header__top-login span {
+  .header__top-login span {
     display: flex;
     font-size: 2.6rem;
   }
-  .header .header__top-login .btn {
+  .header__top-login .btn {
     background-color: #fff;
     color: #333;
     transition: all 0.5s ease-out;
   }
-  .header .header__top-login .btn:hover, .header .header__top-login .btn:active {
+  .header__top-login .btn:hover, .header__top-login .btn:active {
     background-color: #ed2839;
     color: #fff;
   }
-  .header .header__top-login .btn-primary {
+  .header__top-login .btn-primary {
     background-color: #ed2839;
     color: #fff;
   }
-  .header .header__top-login .btn-primary:hover {
+  .header__top-login .btn-primary:hover {
     background-color: #fff;
     color: #333;
   }
-  .header .hamburger-menu .open {
-    display: inline-block;
+  .header__top i.open {
+    display: inline-block !important;
   }
-  .header .header__nav {
+  .header__nav {
     position: absolute;
     top: 100%;
     right: -30rem;
     width: 30rem;
-    height: 100vh;
+    height: calc(100vh - 8.1rem);
     background-color: #000d1c;
     transition: all 0.5s ease-out;
   }
-  .header .header__nav-menu .nav__list {
+  .header__nav-menu .nav__list {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -332,33 +341,32 @@
     margin-top: 3rem;
     margin-left: 3rem;
   }
-  .header .header__nav-menu .nav__list .nav__item {
+  .header__nav-menu .nav__list .nav__item {
     line-height: 2.6rem;
     margin-bottom: 0.5rem;
   }
-  .header .header__nav-menu .nav__list .nav__item .dropdown {
+  .header__nav-menu .nav__list .nav__item .dropdown {
     left: 100%;
   }
-  .header .header__nav-menu .nav__list .nav__item:hover .dropdown {
+  .header__nav-menu .nav__list .nav__item:hover .dropdown {
     top: 2rem;
     background-color: #ed2839;
   }
-  .header .header__nav-menu .nav__list .nav__link:link,
-  .header .header__nav-menu .nav__list .nav-link:visited {
+  .header__nav-menu .nav__list .nav__link:link,
+  .header__nav-menu .nav__list .nav-link:visited {
     font-size: 1.5rem;
   }
-  .header .header__nav-search {
+  .header__nav-search {
     position: absolute;
-    top: 60%;
+    top: 70%;
     right: 20%;
   }
-  .header .header__nav-search .search__form {
+  .header__nav-search .search__form {
     display: flex;
     align-items: center;
     gap: 1.2rem;
   }
 }
-
 .hero {
   height: calc(100vh - 16.2rem);
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url("../images/hero.jpg");

@@ -9,15 +9,13 @@ const openMenu = document.querySelector('.open');
 const closeMenu = document.querySelector('.close');
 
 openMenu.addEventListener('click', () => {
-  navMenu.style.visibility = 'visible';
   navMenu.style.right = '0';
   openMenu.style.display = 'none';
-   closeMenu.style.display = 'inline-block';
+  closeMenu.style.display = 'inline-block';
 });
 
 closeMenu.addEventListener('click', () => {
   navMenu.style.right = '-30rem';
-  navMenu.style.visibility = 'hidden';
   closeMenu.style.display = 'none';
-   openMenu.style.display = 'inline-block';
+  openMenu.style.display = 'inline-block';
 });
